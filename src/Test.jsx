@@ -1,53 +1,33 @@
 import React from 'react'
+    
+let sum = 0;
+let array = [0, 1, 2, 3, 4, 5, 3];
+function Preview(props) {
 
+  function calc(array, n1, n2) {
 
+    // console.log(array, n1,n2);
+    for (let i = 0; i < array.length; i++) {
+      if (i>= n1 && i <= n2) {
+        // console.log(sum += array[i]);
+         sum = sum += array[i]
+      }
+    }
+      return sum;
 
-function Parent({value}){
+  }
+
+  calc(array, 0, 6)
   return (
-  <div>
-    {/* <Child value = {value}/> */}
-
-    <Hexed value = {value} component ={ <Child/>}/>
-    
-    </div>
+    <div>
+task17    
+</div>
   )
 }
 
-function Hexed ({value, component}){
-  // console.log({value});
 
-let hecNumber = value.toString(16)
-// console.log('0x' + hecNumber);
+export default Preview;
 
-  return(
-    <div id='haxed'>
-   <Child value = {'0x' + hecNumber}/>
-  
-    </div>
-  )
-}
-
-function Child ({value}){
-  console.log(value);
-return (
-
-   <div id='child'  >
-    {value}
-    </div>
-)
- 
-    
-}
-
-export function Preview() {
-  return <Parent value={43}/>;
-}
-export default   Preview;
-
-export  {
-  Hexed,
-  Child
-}
 
 
 

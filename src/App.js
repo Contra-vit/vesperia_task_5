@@ -4,10 +4,11 @@ import ResultDispleyer from './Test';
 import Test from './Test';
 
 function App() {
+
   return (
     <div className="App">
      {/* <Test/> */}
-     <Preview/>
+     <Preview />
     </div>
   );
 }
